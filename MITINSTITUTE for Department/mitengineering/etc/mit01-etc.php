@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿<?php
+require('database_handler.php'); 
+$sql_main = "SELECT * FROM mit_eventmaster";
+$result = mysqli_query($conn, $sql_main);
+?>
+
+<!DOCTYPE html>
 <html lang="en">
   
 <!-- Mirrored from 2goodtheme.net/edu-skill/layout/about-us.html by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 01 Feb 2018 15:03:54 GMT -->
@@ -430,75 +436,60 @@
                           <div id="news-carousel" class="news-carousel carousel slide">
                               <div class="carousel-inner">
                                   <div class="item active">
-                                      <div class="col-md-4 col-sm-6">
+                                      
+                                      <?php
+                                      
+                                      if($result){
+ 
+         while($row = mysqli_fetch_assoc($result)) {
+             
+             $sql="SELECT EventType FROM mit_eventtypes WHERE EventTypeID={$row['EventTypeID']}";
+$inner_res = mysqli_query($conn, $sql);
+$inner_row =mysqli_fetch_assoc($inner_res);     
+             
+              $sql="SELECT FirstName, LastName FROM mit_employeemaster WHERE StaffID={$row['StaffID']}";
+$inner_res = mysqli_query($conn, $sql);
+$inner_row_staff = mysqli_fetch_assoc($inner_res);
+             
+              $sql="SELECT StatusValue FROM mit_statusmaster WHERE StatusID='{$row['StatusID']}'";
+$inner_res = mysqli_query($conn, $sql);
+$inner_row_status =mysqli_fetch_assoc($inner_res);
+
+             $sql="SELECT EventCategory FROM mit_eventcategory WHERE EventCategoryID='{$row['EventCategoryID']}'";
+$inner_res = mysqli_query($conn, $sql);
+$inner_row_cat =mysqli_fetch_assoc($inner_res);
+             
+             echo '
+              <div class="col-md-4 col-sm-6">
                                           <div class="gt_blog_wrap default_width mb30">
-                                              <figure>
-                                                  <img src="../../extra-images/engg/etc/events/1.png" alt="">
+                                              <figure >
+                                                  <img height="360" width="280" src="./'.$row['ImagePath'].'" alt="">
                                                   <figcaption class="gt_gallery_style1_des">
                                                       <ul>
                                                           <li><a href="#"><i class="fa fa-link"></i></a></li>
                                                           <li><a href="../../extra-images/gallery-01.jpg" data-rel="prettyPhoto"><i class="fa fa-search"></i></a></li>
                                                       </ul>
-                                                      <h3>Expert talk by Mr. Sanjay Chaudhari</h3>
+                                                      <h3>'.$row['EventName'].'</h3>
                                                   </figcaption>
                                               </figure>
                                               <div class="gt_blog_des default_width">
                                                   <ul class="gt_event_meta">
-                                                      <li><i class="fa fa-calendar"></i>23-03-2018 3.00 pm-5:30 pm</li>
-                                                      <li><i class="fa fa-user"></i>Department of ETC</li>
+                                                      <li><i class="fa fa-calendar"></i>
+                                                          '.$row['StartDate'].' to '.$row['EndDate'].' and '.$row['StartTime'].' to '.$row['EndTime'].'                                                         </li>
+                                                      <li><i class="fa fa-user"></i>
+                                                      ETC Dept.</li>
                                                   </ul>
-                                                  <h6><a href="#">Expert talk </a></h6>
-                                                  <p> <b>Mr. Sanjay Chaudhari</b>  guided the students in understanding need,role and skill set required for electronic engineers in industry</p>
+                                                  <h6><a href="#">'.$inner_row_cat['EventCategory'].' </a></h6>
+                                                  <p> '.$row['EventDescription'].'</p>
                                               </div>
                                               <a href="#">Read More <i class="fa fa-long-arrow-right"></i></a>
                                           </div>
                                       </div>
-                                      <div class="col-md-4 col-sm-6">
-                                          <div class="gt_blog_wrap default_width mb30">
-                                              <figure>
-                                                  <img src="../../extra-images/engg/etc/events/2.png" alt="">
-                                                  <figcaption class="gt_gallery_style1_des">
-                                                      <ul>
-                                                          <li><a href="#"><i class="fa fa-link"></i></a></li>
-                                                          <li><a href="../../extra-images/gallery-01.jpg" data-rel="prettyPhoto"><i class="fa fa-search"></i></a></li>
-                                                      </ul>
-                                                      <h3>ETC Fiesta - Workshop on Arduino and Android</h3>
-                                                  </figcaption>
-                                              </figure>
-                                              <div class="gt_blog_des default_width">
-                                                  <ul class="gt_event_meta">
-                                                      <li><i class="fa fa-calendar"></i>16-03-2018 10:00 am-5:00 pm</li>
-                                                      <li><i class="fa fa-user"></i>Department of ETC</li>
-                                                  </ul>
-                                                  <h6><a href="#">Workshop</a></h6>
-                                                  <p><b>ETC Fiesta</b> Students from various Polytechnic colleges participated for hands-on session on Arduino and Android. </p>
-                                              </div>
-                                              <a href="#">Read More <i class="fa fa-long-arrow-right"></i></a>
-                                          </div>
-                                      </div>
-                                      <div class="col-md-4 col-sm-6">
-                                          <div class="gt_blog_wrap default_width mb30">
-                                              <figure>
-                                                  <img src="../../extra-images/engg/etc/events/3.png" alt="">
-                                                  <figcaption class="gt_gallery_style1_des">
-                                                      <ul>
-                                                          <li><a href="#"><i class="fa fa-link"></i></a></li>
-                                                          <li><a href="../../extra-images/gallery-01.jpg" data-rel="prettyPhoto"><i class="fa fa-search"></i></a></li>
-                                                      </ul>
-                                                      <h3>Technical Event e-Nexplora-2k18 </h3>
-                                                  </figcaption>
-                                              </figure>
-                                              <div class="gt_blog_des default_width">
-                                                  <ul class="gt_event_meta">
-                                                      <li><i class="fa fa-calendar"></i>21-02-2018 10:00 am-5:00 pm</li>
-                                                      <li><i class="fa fa-user"></i>Department of ETC</li>
-                                                  </ul>
-                                                  <h6><a href="#">e-Nexplora-2k18 </a></h6>
-                                                  <p>Highlighted Events : Job Hunt, Robo Race, Global Classes, Circuit frenzy, Sketch Master, Tech Rangoli, Treasure Hunt, etc. </p>
-                                              </div>
-                                              <a href="#">Read More <i class="fa fa-long-arrow-right"></i></a>
-                                          </div>
-                                      </div>
+             <br>
+             <br>';
+         }
+}
+                                  ?>
 
                                   </div>
 
