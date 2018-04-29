@@ -1,0 +1,1 @@
+<?php $id="root";$pass=""; $db="omkardb"; $conn=mysqli_connect('localhost',$id,$pass,$db);?>
