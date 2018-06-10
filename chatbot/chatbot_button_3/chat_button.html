@@ -1,0 +1,30 @@
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+      <link rel="stylesheet" href="css/chat_style.css">
+  <div class="floating-chat">
+      <i>  <img id="chat_btn_img" style="border-radius: 50px;" height="50" width="50" src="mit_small.jpg"></i>
+
+    <div class="chat">
+        <div class="header">
+            <img style="border-radius: 50px"height="60" width="60" src="mit_small.jpg">
+            <span style="font-size: 1.2rem;"class="title">
+                MIT ChatBot
+            </span>
+            <button>
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="messages" > 
+            <iframe  style="border: none;"
+height = "430" border="none"
+                    width = "340"
+    src="./chat_frame.php">
+</iframe>
+        </div>
+        <div style="display:none;" class="footer">
+            <div class="text-box" contenteditable="true" disabled="true"></div>
+            <button id="sendMessage">send</button>
+        </div>
+    </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script  src="js/chat_js.js"></script>
