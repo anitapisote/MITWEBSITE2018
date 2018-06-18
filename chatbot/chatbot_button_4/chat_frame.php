@@ -23,6 +23,11 @@
         body{
             background: none;
         }
+        a:link{
+            
+            color: salmon;
+        }
+        
     
     </style>
 </head>
