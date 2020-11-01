@@ -6,7 +6,7 @@ import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 import * as util from 'util';
 import './App.css';
 import StartScreen from './StartScreen.js';
-import Login1Screen from './Login1Screen.js';
+import LoginScreen from './LoginScreen.js';
 import DataSheet_localizationSheet from './DataSheet_localizationSheet.js';
 
 
@@ -143,8 +143,8 @@ class App extends Component {
           return null;
         case 'start':
           return (<StartScreen {...screenProps} />)
-        case 'login1':
-          return (<Login1Screen {...screenProps} />)
+        case 'login':
+          return (<LoginScreen {...screenProps} />)
       }
     }
 
@@ -155,8 +155,8 @@ class App extends Component {
           <Route path="/start" render={(props) => {
             return makeElementForScreen('start', props.location.state, true, true);
           }} />
-          <Route path="/login1" render={(props) => {
-            return makeElementForScreen('login1', props.location.state, true, true);
+          <Route path="/login" render={(props) => {
+            return makeElementForScreen('login', props.location.state, true, true);
           }} />
         </Switch>
       </div>
