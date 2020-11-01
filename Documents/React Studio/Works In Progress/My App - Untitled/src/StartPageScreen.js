@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import img_elImage from './images/StartPageScreen_elImage_94547.jpg';
-import img_elRoundimage from './images/StartPageScreen_elRoundimage_173965.png';
 
 // UI framework component imports
 import Appbar from 'muicss/lib/react/appbar';
@@ -15,7 +14,6 @@ export default class StartPageScreen extends Component {
     super(props);
     
     this.state = {
-      textarea: '',
     };
   }
 
@@ -28,10 +26,6 @@ export default class StartPageScreen extends Component {
   componentDidUpdate() {
   }
 
-  textAreaChanged_textarea = (event) => {
-    this.setState({textarea: event.target.value});
-  }
-  
   render() {
     let layoutFlowStyle = {};
     let baseStyle = {};
@@ -50,19 +44,7 @@ export default class StartPageScreen extends Component {
     const style_elBackground_outer = {
       backgroundColor: '#f6f6f6',
      };
-    
-    const style_elTextarea = {
-      display: 'block',
-      backgroundColor: 'white',
-      borderColor: 'lightGray',
-      paddingLeft: '1rem',
-      boxSizing: 'border-box', // ensures padding won't expand element's outer size
-      pointerEvents: 'auto',
-     };
     const style_elImage = {
-      height: 'auto',
-     };
-    const style_elRoundimage = {
       height: 'auto',
      };
     
@@ -73,12 +55,6 @@ export default class StartPageScreen extends Component {
             <div className="appBg" style={style_elBackground} />
           </div>
         </div>
-        
-        <div className="layoutFlow" style={layoutFlowStyle}>
-          <div className="elTextarea">
-            <textarea className="baseFont" style={style_elTextarea}  placeholder={this.props.locStrings.startpage_textarea_957711} onChange={this.textAreaChanged_textarea} value={this.state.textarea}  />
-          </div>
-        </div>
         <Appbar className="navBar">
           <div className="backBtn" onClick={ (ev)=>{ this.props.appActions.goBack() } }></div>
         </Appbar>
@@ -86,7 +62,6 @@ export default class StartPageScreen extends Component {
         <div className="screenFgContainer">
           <div className="foreground">
             <img className="elImage" style={style_elImage} src={img_elImage} alt=""  />
-            <img className="elRoundimage" style={style_elRoundimage} src={img_elRoundimage} alt=""  />
           </div>
         </div>
       </div>
