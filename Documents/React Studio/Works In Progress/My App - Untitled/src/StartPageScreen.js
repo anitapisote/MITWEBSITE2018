@@ -61,7 +61,7 @@ export default class StartPageScreen extends Component {
         
         <div className="screenFgContainer">
           <div className="foreground">
-            <img className="containerMinHeight elImage" style={style_elImage} src={img_elImage} alt=""  />
+            <img className="elImage" style={style_elImage} src={img_elImage} alt=""  />
           </div>
         </div>
       </div>
