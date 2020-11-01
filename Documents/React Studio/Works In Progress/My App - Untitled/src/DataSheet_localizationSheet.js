@@ -13,6 +13,11 @@ export default class DataSheet_localizationSheet extends DataSheetBase {
     // eslint-disable-next-line no-unused-vars
     let item;
     
+    item = {};
+    this.items.push(item);
+    item['key'] = "start_button_758220";
+    item['en'] = "New button";
+    
     let storedItems = localStorage.getItem(this.id);
     if (storedItems != null) {
       this.items = JSON.parse(storedItems);

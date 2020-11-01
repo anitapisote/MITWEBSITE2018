@@ -5,8 +5,8 @@ import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 // eslint-disable-next-line
 import * as util from 'util';
 import './App.css';
-import StartScreen from './StartScreen.js';
-import LoginScreen from './LoginScreen.js';
+import StartPageScreen from './StartPageScreen.js';
+import Login1Screen from './Login1Screen.js';
 import DataSheet_localizationSheet from './DataSheet_localizationSheet.js';
 
 
@@ -141,22 +141,22 @@ class App extends Component {
       switch (screenId) {
         default:
           return null;
-        case 'start':
-          return (<StartScreen {...screenProps} />)
-        case 'login':
-          return (<LoginScreen {...screenProps} />)
+        case 'startPage':
+          return (<StartPageScreen {...screenProps} />)
+        case 'login1':
+          return (<Login1Screen {...screenProps} />)
       }
     }
 
     return (
       <div className="App">
         <Switch>
-          <Route path="/" render={(props) => makeElementForScreen('start', props.location.state, true, true)} exact />
-          <Route path="/start" render={(props) => {
-            return makeElementForScreen('start', props.location.state, true, true);
+          <Route path="/" render={(props) => makeElementForScreen('startPage', props.location.state, true, true)} exact />
+          <Route path="/startPage" render={(props) => {
+            return makeElementForScreen('startPage', props.location.state, true, true);
           }} />
-          <Route path="/login" render={(props) => {
-            return makeElementForScreen('login', props.location.state, true, true);
+          <Route path="/login1" render={(props) => {
+            return makeElementForScreen('login1', props.location.state, true, true);
           }} />
         </Switch>
       </div>

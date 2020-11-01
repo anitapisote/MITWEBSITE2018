@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
+import img_elImage from './images/StartPageScreen_elImage_243661.jpg';
 
-export default class Login1Screen extends Component {
+// UI framework component imports
+import Appbar from 'muicss/lib/react/appbar';
+
+export default class StartPageScreen extends Component {
 
   // Properties used by this component:
   // appActions, deviceInfo
@@ -40,9 +44,15 @@ export default class Login1Screen extends Component {
     const style_elBackground_outer = {
       backgroundColor: '#f6f6f6',
      };
+    const style_elImage = {
+      backgroundImage: 'url('+img_elImage+')',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: '50% 50%',
+      backgroundSize: 'cover',
+     };
     
     return (
-      <div className="AppScreen Login1Screen" style={baseStyle}>
+      <div className="AppScreen StartPageScreen" style={baseStyle}>
         <div className="background">
           <div className="containerMinHeight elBackground" style={style_elBackground_outer}>
             <div className="appBg" style={style_elBackground} />
@@ -50,10 +60,13 @@ export default class Login1Screen extends Component {
         </div>
         
         <div className="layoutFlow" style={layoutFlowStyle}>
-          <div className="elSpacer">
-            <div />
+          <div className="elImage">
+            <div style={style_elImage} />
           </div>
         </div>
+        <Appbar className="navBar">
+          <div className="backBtn" onClick={ (ev)=>{ this.props.appActions.goBack() } }></div>
+        </Appbar>
         
       </div>
     )

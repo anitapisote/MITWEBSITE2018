@@ -358,7 +358,7 @@
 
 
 /* Narrowest size for this element's responsive layout */
-  .StartScreen > .background > .elBackground {
+  .StartPageScreen > .background > .elBackground {
     position: absolute;
     left: 0px;
     right: 0px;
@@ -367,7 +367,7 @@
     height: 100%;
   }
 @media (min-width: 568px) {
-  .StartScreen > .background > .elBackground {
+  .StartPageScreen > .background > .elBackground {
     left: 0px;
     right: 0px;
     top: 0px;
@@ -376,7 +376,7 @@
   }
 }
 @media (min-width: 768px) {
-  .StartScreen > .background > .elBackground {
+  .StartPageScreen > .background > .elBackground {
     left: 0px;
     right: 0px;
     top: 0px;
@@ -385,7 +385,7 @@
   }
 }
 @media (min-width: 1024px) {
-  .StartScreen > .background > .elBackground {
+  .StartPageScreen > .background > .elBackground {
     left: 0px;
     right: 0px;
     top: 0px;
@@ -396,7 +396,60 @@
 
 
 /* Narrowest size for this element's responsive layout */
-  .LoginScreen > .background > .elBackground {
+  .StartPageScreen > .layoutFlow > .elImage {
+    position: relative;
+    margin-top: 51px;
+    width: 318px;
+    margin-left: 0px;
+  }
+  .StartPageScreen > .layoutFlow > .elImage > * { 
+  width: 318px;
+  height: 498px;
+  }
+  
+@media (min-width: 568px) {
+  .StartPageScreen > .layoutFlow > .elImage {
+    position: relative;
+    margin-top: 51px;
+    width: 318px;
+    margin-left: 0px;
+  }
+  .StartPageScreen > .layoutFlow > .elImage > * { 
+  width: 318px;
+  height: 498px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .StartPageScreen > .layoutFlow > .elImage {
+    position: relative;
+    margin-top: 50px;
+    width: 316px;
+    margin-left: 0px;
+  }
+  .StartPageScreen > .layoutFlow > .elImage > * { 
+  width: 316px;
+  height: 494px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .StartPageScreen > .layoutFlow > .elImage {
+    position: relative;
+    margin-top: 50px;
+    width: 316px;
+    margin-left: 0px;
+  }
+  .StartPageScreen > .layoutFlow > .elImage > * { 
+  width: 316px;
+  height: 494px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .Login1Screen > .background > .elBackground {
     position: absolute;
     left: 0px;
     right: 0px;
@@ -405,7 +458,7 @@
     height: 100%;
   }
 @media (min-width: 568px) {
-  .LoginScreen > .background > .elBackground {
+  .Login1Screen > .background > .elBackground {
     left: 0px;
     right: 0px;
     top: 0px;
@@ -414,7 +467,7 @@
   }
 }
 @media (min-width: 768px) {
-  .LoginScreen > .background > .elBackground {
+  .Login1Screen > .background > .elBackground {
     left: 0px;
     right: 0px;
     top: 0px;
@@ -423,7 +476,7 @@
   }
 }
 @media (min-width: 1024px) {
-  .LoginScreen > .background > .elBackground {
+  .Login1Screen > .background > .elBackground {
     left: 0px;
     right: 0px;
     top: 0px;
@@ -434,51 +487,51 @@
 
 
 /* Narrowest size for this element's responsive layout */
-  .LoginScreen > .layoutFlow > .elSpacer {
+  .Login1Screen > .layoutFlow > .elSpacer {
     position: relative;
     margin-top: 0px;
     width: 10px;
     margin-left: 0px;
   }
-  .LoginScreen > .layoutFlow > .elSpacer > * { 
+  .Login1Screen > .layoutFlow > .elSpacer > * { 
   width: 10px;
   height: 50px;
   }
   
 @media (min-width: 568px) {
-  .LoginScreen > .layoutFlow > .elSpacer {
+  .Login1Screen > .layoutFlow > .elSpacer {
     position: relative;
     margin-top: 0px;
     width: 10px;
     margin-left: 0px;
   }
-  .LoginScreen > .layoutFlow > .elSpacer > * { 
+  .Login1Screen > .layoutFlow > .elSpacer > * { 
   width: 10px;
   height: 50px;
   }
   
 }
 @media (min-width: 768px) {
-  .LoginScreen > .layoutFlow > .elSpacer {
+  .Login1Screen > .layoutFlow > .elSpacer {
     position: relative;
     margin-top: 0px;
     width: 10px;
     margin-left: 0px;
   }
-  .LoginScreen > .layoutFlow > .elSpacer > * { 
+  .Login1Screen > .layoutFlow > .elSpacer > * { 
   width: 10px;
   height: 50px;
   }
   
 }
 @media (min-width: 1024px) {
-  .LoginScreen > .layoutFlow > .elSpacer {
+  .Login1Screen > .layoutFlow > .elSpacer {
     position: relative;
     margin-top: 0px;
     width: 10px;
     margin-left: 0px;
   }
-  .LoginScreen > .layoutFlow > .elSpacer > * { 
+  .Login1Screen > .layoutFlow > .elSpacer > * { 
   width: 10px;
   height: 50px;
   }
