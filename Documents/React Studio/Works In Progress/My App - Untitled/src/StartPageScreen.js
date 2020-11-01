@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import img_elImage from './images/StartPageScreen_elImage_243661.jpg';
+import img_elImage from './images/StartPageScreen_elImage_94547.jpg';
 
 // UI framework component imports
 import Appbar from 'muicss/lib/react/appbar';
@@ -45,10 +45,7 @@ export default class StartPageScreen extends Component {
       backgroundColor: '#f6f6f6',
      };
     const style_elImage = {
-      backgroundImage: 'url('+img_elImage+')',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: '50% 50%',
-      backgroundSize: 'cover',
+      height: 'auto',
      };
     
     return (
@@ -58,16 +55,15 @@ export default class StartPageScreen extends Component {
             <div className="appBg" style={style_elBackground} />
           </div>
         </div>
-        
-        <div className="layoutFlow" style={layoutFlowStyle}>
-          <div className="elImage">
-            <div style={style_elImage} />
-          </div>
-        </div>
         <Appbar className="navBar">
           <div className="backBtn" onClick={ (ev)=>{ this.props.appActions.goBack() } }></div>
         </Appbar>
         
+        <div className="screenFgContainer">
+          <div className="foreground">
+            <img className="containerMinHeight elImage" style={style_elImage} src={img_elImage} alt=""  />
+          </div>
+        </div>
       </div>
     )
   }
