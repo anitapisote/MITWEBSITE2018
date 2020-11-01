@@ -396,6 +396,59 @@
 
 
 /* Narrowest size for this element's responsive layout */
+  .StartPageScreen > .layoutFlow > .elTextarea {
+    position: relative;
+    margin-top: 270px;
+    width: 261px;
+    margin-left: 56px;
+  }
+  .StartPageScreen > .layoutFlow > .elTextarea > * { 
+  width: 261px;
+  height: 44px;
+  }
+  
+@media (min-width: 568px) {
+  .StartPageScreen > .layoutFlow > .elTextarea {
+    position: relative;
+    margin-top: 269px;
+    width: 261px;
+    margin-left: 56px;
+  }
+  .StartPageScreen > .layoutFlow > .elTextarea > * { 
+  width: 261px;
+  height: 44px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .StartPageScreen > .layoutFlow > .elTextarea {
+    position: relative;
+    margin-top: 268px;
+    width: 259px;
+    margin-left: 56px;
+  }
+  .StartPageScreen > .layoutFlow > .elTextarea > * { 
+  width: 259px;
+  height: 44px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .StartPageScreen > .layoutFlow > .elTextarea {
+    position: relative;
+    margin-top: 268px;
+    width: 259px;
+    margin-left: 56px;
+  }
+  .StartPageScreen > .layoutFlow > .elTextarea > * { 
+  width: 259px;
+  height: 44px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
   .StartPageScreen > .screenFgContainer > .foreground > .elImage {
     position: absolute;
     left: 0px;
@@ -429,6 +482,40 @@
     top: 53px;
     width: 100.0%;
     height: 100%;
+  }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .StartPageScreen > .screenFgContainer > .foreground > .elRoundimage {
+    position: absolute;
+    left: 117px;
+    top: 0px;
+    width: 100px;
+    height: 100px;
+  }
+@media (min-width: 568px) {
+  .StartPageScreen > .screenFgContainer > .foreground > .elRoundimage {
+    left: 117px;
+    top: 0px;
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (min-width: 768px) {
+  .StartPageScreen > .screenFgContainer > .foreground > .elRoundimage {
+    left: 116px;
+    top: 0px;
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (min-width: 1024px) {
+  .StartPageScreen > .screenFgContainer > .foreground > .elRoundimage {
+    left: 116px;
+    top: 0px;
+    width: 100px;
+    height: 100px;
   }
 }
 
